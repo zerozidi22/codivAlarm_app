@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1080917732380",
+    "project_id": "codivalarm",
+    "storage_bucket": "codivalarm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080917732380:android:8afc62d0dff98b19d8c3d9",
+        "android_client_info": {
+          "package_name": "com.happyWatter.codivAlarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080917732380-8okvnmnokcc10vrv77i0j6c5lqle38nt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwMIjy4jyYPk-lEVvn25q6h7VikjOEKVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080917732380-8okvnmnokcc10vrv77i0j6c5lqle38nt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
