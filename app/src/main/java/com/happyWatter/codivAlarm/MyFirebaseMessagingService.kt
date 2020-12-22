@@ -31,55 +31,15 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // If you want to send messages to this application instance or
         // manage this apps subscriptions on the server side, send the
         // Instance ID token to your app server.
-        sendGetRequest(token)
     }
 
-    fun sendGetRequest(token: String) {
-        // URL을 만들어 주고
-        val url = URL("http://10.0.2.2:8080/token")
-        //데이터를 담아 보낼 바디를 만든다
-        val requestBody : RequestBody = FormBody.Builder()
-            .add("token",token)
-            .build()
 
-        // OkHttp Request 를 만들어준다.
-        val request = Request.Builder()
-            .url(url)
-            .post(requestBody)
-
-
-
-
-            .build()
-
-        // 클라이언트 생성
-        val client = OkHttpClient()
-
-        Log.d("전송 주소 ","http://127.0.0.1:8080/token")
-
-        // 요청 전송
-        client.newCall(request).enqueue(object : Callback {
-
-            override fun onResponse(call: Call, response: Response) {
-                Log.d("요청","요청 완료")
-            }
-
-            override fun onFailure(call: Call, e: IOException) {
-                Log.d("요청","요청 실패 ")
-            }
-
-        })
-
-
-
-
-    }
 
 
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
         Log.i("SellerFirebaseService ", "Message :: $message")
-        sendGetRequest("d3pn725KT6WVgecH6KpW3E:APA91bGhHUKAlD6e1Zt1EVePHXIbjZmK5xazR602t8IeORCrgKlYsXo93oKmJuuqLBvU4-Dew8GHPocwvEAohyIwo7kAiISZQQq3FXGq-BFpJktSve3X33jNRF9flWsW3AdDGcu-5olo")
+//        sendGetRequest("d3pn725KT6WVgecH6KpW3E:APA91bGhHUKAlD6e1Zt1EVePHXIbjZmK5xazR602t8IeORCrgKlYsXo93oKmJuuqLBvU4-Dew8GHPocwvEAohyIwo7kAiISZQQq3FXGq-BFpJktSve3X33jNRF9flWsW3AdDGcu-5olo")
 
 
         val data = message.data
