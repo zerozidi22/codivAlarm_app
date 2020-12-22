@@ -39,7 +39,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
         Log.i("SellerFirebaseService ", "Message :: $message")
-//        sendGetRequest("d3pn725KT6WVgecH6KpW3E:APA91bGhHUKAlD6e1Zt1EVePHXIbjZmK5xazR602t8IeORCrgKlYsXo93oKmJuuqLBvU4-Dew8GHPocwvEAohyIwo7kAiISZQQq3FXGq-BFpJktSve3X33jNRF9flWsW3AdDGcu-5olo")
 
 
         val data = message.data

@@ -7,6 +7,10 @@ import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.iid.InstanceIdResult
@@ -20,8 +24,9 @@ import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
-//    lateinit var mAdView : AdView
-//    private lateinit var mInterstitialAd: InterstitialAd
+    //    배너광고, 전면광고 , 버튼 지정
+    lateinit var mAdView : AdView
+    private lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,15 +61,15 @@ class MainActivity : AppCompatActivity() {
         myWebView.loadUrl("http://35.202.26.74:8184/")
 
 
-//        MobileAds.initialize(this) {}
-//        mAdView = findViewById(R.id.adView)
-//        val adRequest = AdRequest.Builder().build()
-//        mAdView.loadAd(adRequest)
-//
-//        mInterstitialAd = InterstitialAd(this)
-//        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/6300978111"
-//        mInterstitialAd.loadAd(AdRequest.Builder().build())
-//        mInterstitialAd.show()
+        MobileAds.initialize(this) {}
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-5821312827792329/1683876903"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+        mInterstitialAd.show()
 
     }
 
