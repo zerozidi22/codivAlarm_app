@@ -67,7 +67,9 @@ class MainActivity : AppCompatActivity() {
         mAdView.loadAd(adRequest)
 
         mInterstitialAd = InterstitialAd(this)
+
         mInterstitialAd.adUnitId = "ca-app-pub-5821312827792329/1683876903"
+//        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/6300978111"
         mInterstitialAd.loadAd(AdRequest.Builder().build())
         mInterstitialAd.show()
 

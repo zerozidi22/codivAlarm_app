@@ -14,14 +14,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="696dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
-
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="match_parent"
@@ -29,6 +21,17 @@
             android:visibility="visible"
             app:adSize="BANNER"
             app:adUnitId="ca-app-pub-5821312827792329/1683876903" />
+<!--            app:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="833dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+
 
 
     </LinearLayout>
